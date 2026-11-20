@@ -1,12 +1,3 @@
-// const test = prompt('test');
-
-// console.log(test);
-
-// ''
-// '   '
-// null
-
-
 const sumInput = prompt('Enter sum. Example: 100');
 const tipsInput = prompt('Enter tips. Example: 25');
 
@@ -20,7 +11,7 @@ if (sumInput === null || tipsInput === null) {
     const isValidTips = Number.isFinite(tips) && (tips >= 0 && tips <= 100);
 
     if (isValidSum && isValidTips) {
-        const resultTips = (sum * tips) / 100;
+        const resultTips = Math.round(sum * tips) / 100;
         const resultSum = sum + resultTips;
 
         alert(`Check sum: ${sum}\nTip: ${tips}%\nTip amount: ${resultTips}\nTotal sum to pay: ${resultSum}`);
