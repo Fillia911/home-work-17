@@ -11,8 +11,8 @@ if (sumInput === null || tipsInput === null) {
     const isValidTips = Number.isFinite(tips) && (tips >= 0 && tips <= 100);
 
     if (isValidSum && isValidTips) {
-        const resultTips = Math.round(sum * tips) / 100;
-        const resultSum = sum + resultTips;
+        const resultTips = Number((sum * tips / 100).toFixed(2));
+        const resultSum = (sum + resultTips).toFixed(2);
 
         alert(`Check sum: ${sum}\nTip: ${tips}%\nTip amount: ${resultTips}\nTotal sum to pay: ${resultSum}`);
     } else {
